@@ -2,4 +2,4 @@ Minesweeper
 ===========
 
 Small web version of minesweeper game .
-![alt tag](http://url/to/img.png)
+![alt tag](https://github.com/ivelius/Minesweeper/blob/master/images/Screenshoot.png?raw=true)
