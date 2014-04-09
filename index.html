@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Mine Swipper</title>
+
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+		<script src="scripts/configs.js"></script>
+		<script src="scripts/console.js"></script>
+		<script src="scripts/cell.js"></script>
+		<script src="scripts/game.js"></script>
+		<script src="scripts/js.js"></script>
+		<script>
+			/**
+			 * Disable default right click menu
+			 */
+			$(document).bind("contextmenu", function(e) {
+				return false;
+			});
+
+			/**
+			 * On Ready
+			 */
+			$(document).ready(function() {
+				//cash mine field
+				jMinefield = $('.minefield');
+
+				//create console
+				timeConsole = new Console($('.console'));
+
+				//set start listener
+				$('button').click(onStartButtonClicked);
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="controlpanel">
+				<button class="inline">
+					Start
+				</button>
+				<select class="inline">
+					<option value="easy">Easy</option>
+					<option value="medium">Medium</option>
+					<option value="hard">Hard</option>
+				</select>
+				<div class="console">
+					0:0
+				</div>
+
+			</div>
+			<div class="minefield"></div>
+		</div>
+	</body>
+</html>
